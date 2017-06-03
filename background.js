@@ -25,6 +25,37 @@ chrome.commands.onCommand.addListener(function(command) {
         }
       );
       break;
+
+	case "move-tabs-to-next-win":
+	  chrome.windows.getAll( {windowTypes: ["normal"], populate: true }, 
+		function(wins) {
+		  var nextWinID=chrome.windows.WINDOW_ID_CURRENT;
+		  var nextWinTabCnt=0;
+
+		  for( var i=0; i< wins.length; i++) {
+			console.log(wins[i]);
+			if (wins[i].focused) {
+				//found the current focus window. So, get next window info
+				nextWinID = wins[(i+1)%wins.length].id;
+				nextWinTabCnt = wins[(i+1)%wins.length].tabs.length;
+				break;
+			}
+		  }
+
+		  if (nextWinID===chrome.windows.WINDOW_ID_CURRENT)
+			  return;
+		  chrome.windows.update(nextWinID, {focused:true});
+		  chrome.tabs.query({ currentWindow: true, highlighted: true },
+			function (tabs) {
+			  for (var j = 0; j < tabs.length; j++) {
+			    chrome.tabs.move(tabs[j].id, {index: -1, windowId: nextWinID});
+			    chrome.tabs.highlight({tabs: [nextWinTabCnt], windowId: nextWinID});
+			  }
+			}
+		  );
+		}
+	  );
+      break;
   }
 
   function shiftOneTabInDirection(tab, direction) {

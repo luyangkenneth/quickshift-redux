@@ -11,6 +11,8 @@ To scratch my own itch, I decided to build [QuickShift Redux](https://chrome.goo
 
 2. That's it, you're done! :tada: Now you can rearrange your Chrome tabs with the keyboard shortcuts `Ctrl + Shift + Left` and `Ctrl + Shift + Right`. You know, like, _controlling_ where to _shift_ your tabs? :smirk:
 
+3. To switch tabs between chrome windows, you can use the keyboard shortcuts `Ctrl + Shift + Up`.
+
 > Note: Rearranging tabs in Chrome does not require any special browser permissions. Unlike other similar extensions out there, QuickShift Redux does not unnecessarily ask you for those permissions!
 
 
@@ -19,6 +21,8 @@ To scratch my own itch, I decided to build [QuickShift Redux](https://chrome.goo
 - Shift the current tab to the left or right, within the same window.
   - If you're so inclined, you can also select multiple tabs and shift them all at once.
 
+- Move the current tab to next window.
+
 This seems really sparse at the moment, but I wanted to just get this out there and ship a simple yet functional first iteration. More features to come!
 
 
@@ -26,7 +30,6 @@ This seems really sparse at the moment, but I wanted to just get this out there 
 - Allow for customization of shortcuts
 - Allow for tab cycling when pinned tabs are present
 - Shift tabs to a specific position e.g. `Ctrl + Shift + 1` through `9`
-- Shift tabs between windows
 - Merge all tabs into a single window
 
 > Note: If you're using a Mac and want to _resize_ your windows (not just Chrome windows) with keyboard shortcuts, try [Spectacle](https://www.spectacleapp.com). If you're on Windows, you can use the existing shortcuts: `Win + Left/Right/Up`. With these in mind, QuickShift Redux will only deal with the _rearranging_ of Chrome tabs.
