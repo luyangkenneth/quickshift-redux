@@ -5,7 +5,7 @@
   "name": "QuickShift Redux - Rearrange Chrome Tabs",
   "short_name": "QuickShift",
   "description": "QuickShift Redux is a Chrome extension that lets you easily and quickly rearrange tabs with keyboard shortcuts.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "Kenneth Lu",
 
   "background": {
@@ -27,6 +27,14 @@
       "suggested_key": {
         "default": "Ctrl+Shift+Right",
         "mac": "MacCtrl+Shift+Right"
+      }
+    },
+
+    "move-tabs-to-next-win": {
+      "description": "move highlighted tab to next window",
+      "suggested_key": {
+        "default": "Ctrl+Shift+Up",
+        "mac": "MacCtrl+Shift+Up"
       }
     }
   }
