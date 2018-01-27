@@ -9,7 +9,7 @@ chrome.commands.onCommand.addListener(function(command) {
     case "move-tabs-left":
       processHighlightedTabs(function (tabs) {
         for (let i = 0; i < tabs.length; i++) {
-          shiftOneTabInDirection(tabs[i], -1);
+          moveOneTabInDirection(tabs[i], -1);
         }
       });
       break;
@@ -17,7 +17,7 @@ chrome.commands.onCommand.addListener(function(command) {
     case "move-tabs-right":
       processHighlightedTabs(function (tabs) {
         for (let i = tabs.length - 1; i >= 0; i--) {
-          shiftOneTabInDirection(tabs[i], 1);
+          moveOneTabInDirection(tabs[i], 1);
         }
       });
       break;
@@ -44,7 +44,7 @@ chrome.commands.onCommand.addListener(function(command) {
     chrome.tabs.query({ currentWindow: true, highlighted: true }, callback);
   }
 
-  function shiftOneTabInDirection(tab, direction) {
+  function moveOneTabInDirection(tab, direction) {
     let index = tab.index + direction;
     if (index >= numTabsInCurrentWindow) {
       index = numTabsInCurrentWindow - 1;
