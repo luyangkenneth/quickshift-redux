@@ -7,24 +7,24 @@ chrome.commands.onCommand.addListener(function(command) {
 
   switch (command) {
     case "move-tabs-left":
-      chrome.tabs.query({ currentWindow: true, highlighted: true },
-        function (tabs) {
-          for (let i = 0; i < tabs.length; i++) {
-            shiftOneTabInDirection(tabs[i], -1);
-          }
+      processHighlightedTabs(function (tabs) {
+        for (let i = 0; i < tabs.length; i++) {
+          shiftOneTabInDirection(tabs[i], -1);
         }
-      );
+      });
       break;
 
     case "move-tabs-right":
-      chrome.tabs.query({ currentWindow: true, highlighted: true },
-        function (tabs) {
-          for (let i = tabs.length - 1; i >= 0; i--) {
-            shiftOneTabInDirection(tabs[i], 1);
-          }
+      processHighlightedTabs(function (tabs) {
+        for (let i = tabs.length - 1; i >= 0; i--) {
+          shiftOneTabInDirection(tabs[i], 1);
         }
-      );
+      });
       break;
+  }
+
+  function processHighlightedTabs(callback) {
+    chrome.tabs.query({ currentWindow: true, highlighted: true }, callback);
   }
 
   function shiftOneTabInDirection(tab, direction) {
