@@ -17,22 +17,22 @@ Simply install [QuickShift Redux](https://chrome.google.com/webstore/detail/quic
 - Move the current tab to the left or right within the same window, with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd>
   - If you're so inclined, you can also select multiple tabs and move them all at once
 
-- Undock highlighted tabs to a new window, with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>Up</kbd>
+- Undock tabs to a new window, with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>U</kbd>
 
+- Move tabs between windows, with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd>
 
-## Customizing Shortcuts :keyboard:
+## Customizing Keyboard Shortcuts :keyboard:
 
-1. Navigate to `chrome://extensions/` from your address bar
+1. Navigate to `chrome://extensions` from your address bar
 2. Scroll all the way down and click on `Keyboard Shortcuts`
 3. Look for `QuickShift Redux` and customize your shortcuts accordingly!
 
 
 ## Future Development :hammer_and_wrench:
-- Move tabs between windows
 - Move tabs to a specific position e.g. <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>1</kbd> through <kbd>9</kbd>
 - Merge all tabs into a single window
 
-> Note: If you're using a Mac and want to _resize_ your windows (not just Chrome windows) with keyboard shortcuts, try [Spectacle](https://www.spectacleapp.com). If you're on Windows, you can use the existing shortcuts: <kbd>Win</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd>/<kbd>Up</kbd>. With these in mind, QuickShift Redux will only deal with the _rearranging_ of Chrome tabs.
+> Note: If you're using a Mac and want to _resize_ your windows (not just Chrome windows) with keyboard shortcuts, [Spectacle](https://www.spectacleapp.com) is a great app for that. If you're on Windows, you can use the existing shortcuts: <kbd>Win</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd>/<kbd>Up</kbd>. With these in mind, QuickShift Redux will only deal with the _rearranging_ of Chrome tabs.
 
 
 ## Acknowledgements :raised_hands:
