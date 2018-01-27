@@ -6,7 +6,7 @@ chrome.commands.onCommand.addListener(function(command) {
   );
 
   switch (command) {
-    case "shift-tabs-left":
+    case "move-tabs-left":
       chrome.tabs.query({ currentWindow: true, highlighted: true },
         function (tabs) {
           for (let i = 0; i < tabs.length; i++) {
@@ -16,7 +16,7 @@ chrome.commands.onCommand.addListener(function(command) {
       );
       break;
 
-    case "shift-tabs-right":
+    case "move-tabs-right":
       chrome.tabs.query({ currentWindow: true, highlighted: true },
         function (tabs) {
           for (let i = tabs.length - 1; i >= 0; i--) {
