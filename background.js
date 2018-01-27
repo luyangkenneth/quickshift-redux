@@ -21,6 +21,23 @@ chrome.commands.onCommand.addListener(function(command) {
         }
       });
       break;
+
+    case "undock-tabs-to-new-window":
+      let activeTab;
+      chrome.tabs.query({ currentWindow: true, active: true },
+        function (tabs) { activeTab = tabs[0]; }
+      );
+
+      processHighlightedTabs(function (tabs) {
+        chrome.windows.create({ tabId: tabs[0].id }, function (window) {
+          tabs.shift();
+          if (tabs.length > 0) {
+            chrome.tabs.move(tabs.map(tab => tab.id), { windowId: window.id, index: 1 });
+            chrome.tabs.update(activeTab.id, { active: true });
+          }
+        });
+      });
+      break;
   }
 
   function processHighlightedTabs(callback) {

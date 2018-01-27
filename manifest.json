@@ -28,6 +28,14 @@
         "default": "Ctrl+Shift+Right",
         "mac": "MacCtrl+Shift+Right"
       }
+    },
+
+    "undock-tabs-to-new-window": {
+      "description": "Undock highlighted tabs to a new window",
+      "suggested_key": {
+        "default": "Ctrl+Shift+Up",
+        "mac": "MacCtrl+Shift+Up"
+      }
     }
   }
 
