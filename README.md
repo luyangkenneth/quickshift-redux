@@ -24,7 +24,6 @@ This seems really sparse at the moment, but I wanted to just get this out there 
 
 ## Future Development
 - Allow for customization of shortcuts
-- Allow for tab cycling when pinned tabs are present
 - Move tabs to a specific position e.g. `Ctrl + Shift + 1` through `9`
 - Move tabs between windows
 - Merge all tabs into a single window

@@ -29,7 +29,11 @@ chrome.commands.onCommand.addListener(function(command) {
 
   function shiftOneTabInDirection(tab, direction) {
     let index = tab.index + direction;
-    if (index >= numTabsInCurrentWindow) index = 0;
+    if (index >= numTabsInCurrentWindow) {
+      index = numTabsInCurrentWindow - 1;
+    } else if (index < 0) {
+      index = 0;
+    }
 
     chrome.tabs.move(tab.id, { index: index });
   }
