@@ -33,16 +33,16 @@
     "undock-tabs-to-new-window": {
       "description": "Undock highlighted tabs to a new window",
       "suggested_key": {
-        "default": "Ctrl+Shift+Up",
-        "mac": "MacCtrl+Shift+Up"
+        "default": "Ctrl+Shift+U",
+        "mac": "MacCtrl+Shift+U"
       }
     },
 
     "move-tabs-between-windows": {
       "description": "Move tabs between windows",
       "suggested_key": {
-        "default": "Ctrl+Shift+Down",
-        "mac": "MacCtrl+Shift+Down"
+        "default": "Ctrl+Shift+M",
+        "mac": "MacCtrl+Shift+M"
       }
     }
   }
