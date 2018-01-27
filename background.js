@@ -1,6 +1,6 @@
 chrome.commands.onCommand.addListener(function(command) {
 
-  var numTabsInCurrentWindow;
+  let numTabsInCurrentWindow;
   chrome.tabs.query({ currentWindow: true },
     function (tabs) { numTabsInCurrentWindow = tabs.length; }
   );
@@ -9,7 +9,7 @@ chrome.commands.onCommand.addListener(function(command) {
     case "shift-tabs-left":
       chrome.tabs.query({ currentWindow: true, highlighted: true },
         function (tabs) {
-          for (var i = 0; i < tabs.length; i++) {
+          for (let i = 0; i < tabs.length; i++) {
             shiftOneTabInDirection(tabs[i], -1);
           }
         }
@@ -19,7 +19,7 @@ chrome.commands.onCommand.addListener(function(command) {
     case "shift-tabs-right":
       chrome.tabs.query({ currentWindow: true, highlighted: true },
         function (tabs) {
-          for (var i = tabs.length - 1; i >= 0; i--) {
+          for (let i = tabs.length - 1; i >= 0; i--) {
             shiftOneTabInDirection(tabs[i], 1);
           }
         }
@@ -28,7 +28,7 @@ chrome.commands.onCommand.addListener(function(command) {
   }
 
   function shiftOneTabInDirection(tab, direction) {
-    var index = tab.index + direction;
+    let index = tab.index + direction;
     if (index >= numTabsInCurrentWindow) index = 0;
 
     chrome.tabs.move(tab.id, { index: index });
