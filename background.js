@@ -38,6 +38,33 @@ chrome.commands.onCommand.addListener(function(command) {
         });
       });
       break;
+
+    case "move-tabs-between-windows":
+      chrome.windows.getAll({ populate: true },
+        function (windows) {
+          if (windows.length < 2) return;
+
+          chrome.windows.getCurrent(
+            function (currentWindow) {
+              let nextWindowIndex = windows.map(window => window.id).indexOf(currentWindow.id) + 1;
+              if (nextWindowIndex >= windows.length) nextWindowIndex = 0;
+              let nextWindow = windows[nextWindowIndex];
+
+              processHighlightedTabs(function (tabs) {
+                chrome.tabs.query({ currentWindow: true, active: true },
+                  function (activeTabs) {
+                    let activeTab = activeTabs[0];
+                    chrome.tabs.move(tabs.map(tab => tab.id), { windowId: nextWindow.id, index: nextWindow.tabs.length });
+                    chrome.tabs.update(activeTab.id, { active: true });
+                    chrome.windows.update(nextWindow.id, { focused: true });
+                  }
+                );
+              });
+            }
+          );
+        }
+      );
+      break;
   }
 
   function processHighlightedTabs(callback) {

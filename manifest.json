@@ -36,6 +36,14 @@
         "default": "Ctrl+Shift+Up",
         "mac": "MacCtrl+Shift+Up"
       }
+    },
+
+    "move-tabs-between-windows": {
+      "description": "Move tabs between windows",
+      "suggested_key": {
+        "default": "Ctrl+Shift+Down",
+        "mac": "MacCtrl+Shift+Down"
+      }
     }
   }
 
