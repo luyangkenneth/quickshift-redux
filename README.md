@@ -2,7 +2,7 @@
 
 Rearranging Chrome tabs with the usual drag-and-drop method is an annoying and laggy affair. When you move your mouse cursor across the tab bar, you might accidentally undock the tab and create a new browser window. Having many tabs open also forces you to be really precise with your click-and-drag motion.
 
-To scratch my own itch, I decided to build [QuickShift Redux](https://chrome.google.com/webstore/detail/quickshift/daiohbdbfnmpbolhbpbngdjdjcbclikm/). Read on and try it for yourself! :left_right_arrow:
+To scratch my own itch, I decided to build an extension to easily and quickly rearrange Chrome tabs with keyboard shortcuts. Read on and try it for yourself! :left_right_arrow:
 
 
 ## Getting Started :rocket:
@@ -21,6 +21,9 @@ Simply install [QuickShift Redux](https://chrome.google.com/webstore/detail/quic
 
 - Move tabs between windows, with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>M</kbd>
 
+> Note: If you're using a Mac and want to _resize_ your windows (not just Chrome windows) with keyboard shortcuts, [Spectacle](https://www.spectacleapp.com) is a great app for that. If you're on Windows, you can use the existing shortcuts: <kbd>Win</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd>/<kbd>Up</kbd>. With these in mind, QuickShift Redux will only deal with the _rearranging_ of Chrome tabs.
+
+
 ## Customizing Keyboard Shortcuts :keyboard:
 
 1. Navigate to `chrome://extensions` from your address bar
@@ -31,8 +34,6 @@ Simply install [QuickShift Redux](https://chrome.google.com/webstore/detail/quic
 ## Future Development :hammer_and_wrench:
 - Move tabs to a specific position e.g. <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>1</kbd> through <kbd>9</kbd>
 - Merge all tabs into a single window
-
-> Note: If you're using a Mac and want to _resize_ your windows (not just Chrome windows) with keyboard shortcuts, [Spectacle](https://www.spectacleapp.com) is a great app for that. If you're on Windows, you can use the existing shortcuts: <kbd>Win</kbd> + <kbd>Left</kbd>/<kbd>Right</kbd>/<kbd>Up</kbd>. With these in mind, QuickShift Redux will only deal with the _rearranging_ of Chrome tabs.
 
 
 ## Acknowledgements :raised_hands:
