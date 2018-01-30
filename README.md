@@ -4,6 +4,10 @@ Rearranging Chrome tabs with the usual drag-and-drop method is an annoying and l
 
 To scratch my own itch, I decided to build an extension to easily and quickly rearrange Chrome tabs with keyboard shortcuts. Read on and try it for yourself! :left_right_arrow:
 
+![Quickshift-Redux Chrome Extension](https://i.imgur.com/QFjdfn4.png)
+
+See it in action: [Quickshift-Redux Chrome Extension screencast](https://youtu.be/4GDRN3ZzM58)
+
 
 ## Getting Started :rocket:
 
