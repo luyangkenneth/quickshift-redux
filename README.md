@@ -1,12 +1,10 @@
-# QuickShift Redux
+# QuickShift Redux :left_right_arrow:
 
 Rearranging Chrome tabs with the usual drag-and-drop method is an annoying and laggy affair. When you move your mouse cursor across the tab bar, you might accidentally undock the tab and create a new browser window. Having many tabs open also forces you to be really precise with your click-and-drag motion.
 
-To scratch my own itch, I decided to build an extension to easily and quickly rearrange Chrome tabs with keyboard shortcuts. Read on and try it for yourself! :left_right_arrow:
+To scratch my own itch, I decided to build [QuickShift Redux](https://chrome.google.com/webstore/detail/quickshift/daiohbdbfnmpbolhbpbngdjdjcbclikm/), an extension to easily and quickly rearrange Chrome tabs with keyboard shortcuts. See it in action in this [30s video demo](https://youtu.be/4GDRN3ZzM58)!
 
-![Quickshift-Redux Chrome Extension](https://i.imgur.com/QFjdfn4.png)
-
-See it in action: [Quickshift-Redux Chrome Extension screencast](https://youtu.be/4GDRN3ZzM58)
+![](screenshot.jpg)
 
 
 ## Getting Started :rocket:
@@ -43,3 +41,5 @@ Simply install [QuickShift Redux](https://chrome.google.com/webstore/detail/quic
 ## Acknowledgements :raised_hands:
 
 Credits to [Nick Spreitzer](https://github.com/refactorsaurusrex/QuickShiftForChrome) for the original name and idea. I didn't refer to his old code, but decided to adopt the name so that anyone looking for [the](https://lifehacker.com/5642713/quickshift-moves-tabs-between-chrome-windows-via-keyboard-shortcuts) [original](http://www.callingallgeeks.org/quickshift-for-google-chrome-makes-browsing-easier-faster/) [extension](http://www.addictivetips.com/internet-tips/add-customizable-keyboard-shortcuts-with-quickshift-for-chrome/) can easily find this redux version.
+
+Thanks [Tim Osborn](https://github.com/ptim) for the screenshot and video demo!
