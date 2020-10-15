@@ -46,9 +46,14 @@ chrome.commands.onCommand.addListener(function(command) {
 
           chrome.windows.getCurrent(
             function (currentWindow) {
-              let nextWindowIndex = windows.map(window => window.id).indexOf(currentWindow.id) + 1;
-              if (nextWindowIndex >= windows.length) nextWindowIndex = 0;
-              let nextWindow = windows[nextWindowIndex];
+              let currentWindowIndex = windows.map(window => window.id).indexOf(currentWindow.id);
+              let nextWindowIndex = currentWindowIndex;
+              let nextWindow = null;
+              do {
+                nextWindowIndex++;
+                if (nextWindowIndex >= windows.length) nextWindowIndex = 0;
+                nextWindow = windows[nextWindowIndex];
+              } while (nextWindow.type != "normal" && nextWindowIndex != currentWindowIndex);
 
               processHighlightedTabs(function (tabs) {
                 chrome.tabs.query({ currentWindow: true, active: true },
